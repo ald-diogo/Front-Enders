@@ -1,0 +1,118 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">FrontEnd_SIGA</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+   <nav class="flex-column">
+
+          <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Professores
+            </NavLink>
+          </div>
+
+          <div class="nav-item px-3">
+            <NavLink class="nav-link" href="counter">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
+            </NavLink>
+          </div>
+
+          <div class="nav-item px-3">
+            <NavLink class="nav-link" href="weather">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
+            </NavLink>
+          </div>
+
+     <li class="nav-item px-3">
+         <NavLink class="nav-link" href="cadastro-professor">
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Cadastro de Professores
+         </NavLink>
+      </li>
+
+     <li class="nav-item px-3">
+        <NavLink class="nav-link" href="cadastro-estudante">
+           <span class="oi oi-list-rich" aria-hidden="true"></span> Cadastro de Estudantes
+        </NavLink>
+     </li>
+
+     <li class="nav-item px-3">
+         <NavLink class="nav-link" href="cadastro-nota">
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Cadastro de Notas
+         </NavLink>
+     </li>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="lista-estudante">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Lista de Estudantes
+            </NavLink>
+        </div>
+
+
+   </nav>
+</div>
+
+<style >
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+   h3 {
+       color: darkviolet;
+       align-items: center;
+       text-align: center;
+    }
+
+    .sidebar {
+        width: 200px;
+        float: left;
+    }
+
+    .main {
+        margin-left: 210px;
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    label,button {
+        display: flex;
+        padding: 10px;
+        flex-direction: column-reverse;
+    }
+
+    button {
+        color: darkgoldenrod;
+        background-color: darkblue;
+        padding: 10px;
+        border-radius: 5px;
+        width: 200px;
+    }
+
+    button:hover {
+        background-color: green;
+    }
+</style>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

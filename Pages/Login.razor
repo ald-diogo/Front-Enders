@@ -1,0 +1,48 @@
+﻿@page "/login"
+@using FrontEnd_SIGA
+@using FrontEnd_SIGA.Entidades
+@using FrontEnd_SIGA.Layout
+@using FrontEnd_SIGA.Services
+@inject UsuarioService UsuarioService
+@inject NavigationManager Navigation
+
+<EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Nome:</label>
+        <InputText @bind-Value="loginModel.Nome" />
+    </div>
+
+    <div>
+        <label>Senha:</label>
+        <InputText @bind-Value="loginModel.Senha" type="password" />
+    </div>
+
+    <button type="submit">Login</button>
+</EditForm>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+
+    private void HandleLogin()
+    {
+        var usuario = UsuarioService.Login(loginModel.Nome, loginModel.Senha);
+        if (usuario != null)
+        {
+            Navigation.NavigateTo($"/dados-usuario/{usuario.Id}");
+        }
+        else
+        {
+            // Exibir mensagem de erro
+        }
+    }
+
+    public class LoginModel
+    {
+        public string Nome { get; set; }
+        public string Senha { get; set; }
+    }
+}
+

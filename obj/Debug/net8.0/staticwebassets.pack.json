@@ -1,0 +1,81 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\obj\\Debug\\net8.0\\compressed\\x1yz8q78pb.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\obj\\Debug\\net8.0\\scopedcss\\bundle\\FrontEnd_SIGA.styles.css",
+      "PackagePath": "staticwebassets\\FrontEnd_SIGA.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\obj\\Debug\\net8.0\\service-worker-assets.js",
+      "PackagePath": "staticwebassets\\service-worker-assets.js"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\obj\\Debug\\net8.0\\service-worker\\service-worker.published.js",
+      "PackagePath": "staticwebassets\\service-worker.js"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\wwwroot\\icon-512.png",
+      "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\wwwroot\\manifest.webmanifest",
+      "PackagePath": "staticwebassets\\manifest.webmanifest"
+    },
+    {
+      "Id": "C:\\Users\\Francisco Diogo\\source\\repos\\FrontEnd_SIGA\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FrontEnd_SIGA.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FrontEnd_SIGA.props",
+      "PackagePath": "build\\FrontEnd_SIGA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FrontEnd_SIGA.props",
+      "PackagePath": "buildMultiTargeting\\FrontEnd_SIGA.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FrontEnd_SIGA.props",
+      "PackagePath": "buildTransitive\\FrontEnd_SIGA.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

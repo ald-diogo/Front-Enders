@@ -1,0 +1,76 @@
+﻿@page "/cadastro-professor"
+@using FrontEnd_SIGA
+@using FrontEnd_SIGA.Entidades
+@using FrontEnd_SIGA.Layout
+@using global::CadastroProfessores.Services
+@inject ProfessorService ProfessorService
+
+<h3>Cadastro de Professores</h3>
+
+<EditForm Model="@novoProfessor" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Nome:</label>
+        <InputText @bind-Value="novoProfessor.Nome" />
+    </div>
+
+    <div>
+        <label>Disciplina:</label>
+        <InputText @bind-Value="novoProfessor.Disciplina" />
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <InputText @bind-Value="novoProfessor.Email" />
+    </div>
+
+    <div>
+        <label>Data de Contrato:</label>
+        <InputDate @bind-Value="novoProfessor.DataDeContrato" />
+    </div>
+
+    <div>
+        <label>Departamento:</label>
+        <InputText @bind-Value="novoProfessor.Departamento" />
+    </div>
+
+    <button type="submit">Cadastrar</button>
+</EditForm>
+
+<h3>Lista de Professores</h3>
+
+<ul>
+    @foreach (var professor in professores)
+    {
+        <li>
+            @professor.Nome -
+            @professor.Disciplina -
+            @professor.Email -
+            @professor.DataDeContrato.ToString("dd/MM/yyyy") -
+            @professor.Departamento
+        </li>
+    }
+</ul>
+
+@code {
+    private Professor novoProfessor = new Professor();
+    private List<Professor> professores = new List<Professor>();
+
+    private void HandleValidSubmit()
+    {
+        ProfessorService.AddProfessor(novoProfessor);
+        professores = ProfessorService.GetProfessores();
+        novoProfessor = new Professor();
+    }
+
+    protected override void OnInitialized()
+    {
+        professores = ProfessorService.GetProfessores();
+    }
+}
+
+
+
+

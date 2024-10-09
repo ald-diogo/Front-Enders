@@ -1,0 +1,20 @@
+﻿@page "/lista-professores"
+@using FrontEnd_SIGA
+@using FrontEnd_SIGA.Layout
+@using global::CadastroProfessores.Services
+@inject ProfessorService ProfessorService
+
+<h3>Lista de Professores</h3>
+<ul>
+    @foreach (var professor in ProfessorService.GetProfessores())
+    {
+        <li>
+            @professor.Nome -
+            @professor.Disciplina -
+            @professor.Email -
+            @professor.DataDeContrato.ToString("dd/MM/yyyy") -
+            @professor.Departamento
+        </li>
+    }
+</ul>
+

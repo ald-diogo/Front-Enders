@@ -1,0 +1,75 @@
+﻿@page "/cadastro-estudante"
+@using FrontEnd_SIGA
+@using FrontEnd_SIGA.Layout
+@using CadastroNotasEstudantes.Services
+@using FrontEnd_SIGA.Entidades
+@inject EstudanteService EstudanteService
+
+<h3>Cadastro de Estudantes</h3>
+
+<EditForm Model="@novoEstudante" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Nome:</label>
+        <InputText @bind-Value="novoEstudante.Nome" />
+    </div>
+
+    <div>
+        <label>Curso:</label>
+        <InputText @bind-Value="novoEstudante.Curso" />
+    </div>
+
+    <div>
+        <label>Morada:</label>
+        <InputText @bind-Value="novoEstudante.Morada" />
+    </div>
+
+    <div>
+        <label>Telefone:</label>
+        <InputText @bind-Value="novoEstudante.Telefone" />
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <InputText @bind-Value="novoEstudante.Email" />
+    </div>
+
+    <div>
+        <label>Data de Nascimento:</label>
+        <InputDate @bind-Value="novoEstudante.DataDeNascimento" />
+    </div>
+
+    <button type="submit">Cadastrar</button>
+</EditForm>
+
+<h3>Lista de Estudantes</h3>
+<ul>
+    @foreach (var estudante in EstudanteService.GetEstudantes())
+    {
+        <li>@estudante.Nome -
+            @estudante.Curso-
+            @estudante.Morada - 
+            @estudante.Telefone - 
+            @estudante.Email - 
+            @estudante.DataDeNascimento?.ToString("dd/MM/yyyy")
+        </li>
+    }
+</ul>
+
+@code {
+    private Estudante novoEstudante = new Estudante();
+
+    private void HandleValidSubmit()
+    {
+        EstudanteService.AddEstudante(novoEstudante);
+        novoEstudante = new Estudante();
+    }
+}
+
+
+
+
+
+

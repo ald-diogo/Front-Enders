@@ -1,0 +1,31 @@
+﻿@page "/dados-usuario/{id:int}"
+@using FrontEnd_SIGA.Services
+@using FrontEnd_SIGA.Entidades
+@using System.Reflection.Metadata
+@inject UsuarioService UsuarioService
+@inject NavigationManager Navigation
+Parameter int id
+
+<h3>Dados do Usuário</h3>
+<p>@usuario?.Dados</p>
+
+<button @onclick="TerminarSessao">Terminar Sessão</button>
+
+@code {
+    private Usuario usuario;
+
+    protected override void OnParametersSet()
+    {
+        usuario = UsuarioService.Login("admin", "admin"); // Simulação de busca do usuário pelo ID
+    }
+
+    private void TerminarSessao()
+    {
+        //if (confirm("Deseja terminar a sessão?"))
+        {
+            Navigation.NavigateTo("/login");
+        }
+    }
+}
+
+

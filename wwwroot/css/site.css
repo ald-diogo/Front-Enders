@@ -1,0 +1,32 @@
+﻿body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    float:left;
+}
+
+.main {
+    margin-left: 210px;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+label{
+    display:flex;
+    padding: 20px;
+}
+
+button {
+    color: darkblue;
+}
